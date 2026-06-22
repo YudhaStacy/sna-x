@@ -61,5 +61,5 @@ For more complex searches, use X/Twitter Advanced Search to build your query, th
 Example:
 
 ```bash
-python scraper -q '("PPN 12" OR "PPN 12 Persen") lang:id since:2024-10-01 until:2024-10-31'
+python scraper -q '("PPN 12" OR "PPN 12 Persen") since:2024-10-01 until:2024-10-31'
 ```
