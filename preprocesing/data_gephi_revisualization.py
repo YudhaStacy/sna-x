@@ -1,8 +1,13 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 
 # Membaca file CSV
-df = pd.read_csv('data.csv', sep=';')
+df = pd.read_csv(r'preprocesing\data_exported_from_gephi.csv', sep=';')
+
+# Folder output
+output_dir = r'preprocesing\img'
+os.makedirs(output_dir, exist_ok=True)
 
 # Degree metrics
 degree_metrics = {
@@ -51,5 +56,10 @@ for col, title_text in all_metrics.items():
     plt.gca().spines['right'].set_visible(False)
 
     plt.tight_layout()
-    plt.savefig(filename, dpi=300, bbox_inches='tight')
+
+    # Simpan ke preprocesing/img
+    save_path = os.path.join(output_dir, filename)
+    plt.savefig(save_path, dpi=300, bbox_inches='tight')
+
     plt.show()
+    plt.close()
