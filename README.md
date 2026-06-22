@@ -61,5 +61,13 @@ For more complex searches, use X/Twitter Advanced Search to build your query, th
 Example:
 
 ```bash
-python scraper -q '("PPN 12" OR "PPN 12 Persen") since:2024-10-01 until:2024-10-31'
+python scraper --query='("PPN 12" OR "PPN 12 Persen") until:2024-10-31 since:2024-10-01' -ntl
 ```
+
+### Modifications
+
+* Replaced username/password login with Twitter/X Auth Token authentication.
+* Added `reply_to` tweet extraction for conversation and network analysis.
+
+Original project: [selenium-twitter-scraper](https://github.com/godkingjay/selenium-twitter-scraper)
+
